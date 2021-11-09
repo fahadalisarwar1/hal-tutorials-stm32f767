@@ -34,15 +34,13 @@ int main(void)
 
 	gpio_LED_Blue_init();
 
-	exti_BUTTON_IT_init();
 
-	printf("program starting...\r\n");
 
-	int counter = 0;
+
 
     while(1)
     {
-    	counter++;
+
     	HAL_Delay(100);
     }
 }
