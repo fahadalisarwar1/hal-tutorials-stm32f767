@@ -1,2 +1,0 @@
-nucleo_stm32f767xx_uart.c:12:6:uart_UART3_GPIO_config	56	static
-nucleo_stm32f767xx_uart.c:44:6:uart_UART3_config	16	static
