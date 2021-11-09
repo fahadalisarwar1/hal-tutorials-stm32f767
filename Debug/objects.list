@@ -7,6 +7,8 @@
 "./BSP/NUCLEO-F767ZI/Src/nucleo_stm32f767xx_rcc.o"
 "./BSP/NUCLEO-F767ZI/Src/nucleo_stm32f767xx_uart.o"
 "./HAL_DRIVERS/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o"
+"./HAL_DRIVERS/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc.o"
+"./HAL_DRIVERS/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc_ex.o"
 "./HAL_DRIVERS/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.o"
 "./HAL_DRIVERS/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.o"
 "./HAL_DRIVERS/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.o"

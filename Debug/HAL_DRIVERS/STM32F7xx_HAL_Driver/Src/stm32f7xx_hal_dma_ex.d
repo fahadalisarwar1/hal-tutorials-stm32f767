@@ -21,6 +21,9 @@ HAL_DRIVERS/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.o: \
  D:/HAL_workspace/01_blank_project/HAL_DRIVERS/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma.h \
  d:\hal_workspace\01_blank_project\hal_drivers\stm32f7xx_hal_driver\inc\stm32f7xx_hal_dma_ex.h \
  D:/HAL_workspace/01_blank_project/HAL_DRIVERS/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cortex.h \
+ D:/HAL_workspace/01_blank_project/HAL_DRIVERS/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc.h \
+ D:/HAL_workspace/01_blank_project/HAL_DRIVERS/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_def.h \
+ D:/HAL_workspace/01_blank_project/HAL_DRIVERS/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc_ex.h \
  D:/HAL_workspace/01_blank_project/HAL_DRIVERS/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_exti.h \
  D:/HAL_workspace/01_blank_project/HAL_DRIVERS/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h \
  d:\hal_workspace\01_blank_project\hal_drivers\stm32f7xx_hal_driver\inc\stm32f7xx_hal_flash_ex.h \
@@ -74,6 +77,12 @@ D:/HAL_workspace/01_blank_project/HAL_DRIVERS/STM32F7xx_HAL_Driver/Inc/stm32f7xx
 d:\hal_workspace\01_blank_project\hal_drivers\stm32f7xx_hal_driver\inc\stm32f7xx_hal_dma_ex.h:
 
 D:/HAL_workspace/01_blank_project/HAL_DRIVERS/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cortex.h:
+
+D:/HAL_workspace/01_blank_project/HAL_DRIVERS/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc.h:
+
+D:/HAL_workspace/01_blank_project/HAL_DRIVERS/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_def.h:
+
+D:/HAL_workspace/01_blank_project/HAL_DRIVERS/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc_ex.h:
 
 D:/HAL_workspace/01_blank_project/HAL_DRIVERS/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_exti.h:
 
