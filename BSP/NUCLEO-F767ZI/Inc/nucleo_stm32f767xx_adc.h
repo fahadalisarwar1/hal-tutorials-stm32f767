@@ -11,6 +11,12 @@
 #include "main.h"
 
 
+extern ADC_HandleTypeDef adc1_handler;
+
+
+#define ADC1_CH5			GPIO_PIN_5
+
+
 void adc_GPIO_init(void);
 
 bool adc_single_conversion_init(void);
