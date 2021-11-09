@@ -28,20 +28,22 @@ bool adc_single_conversion_init()
 {
 	__HAL_RCC_ADC1_CLK_ENABLE();
 
+	// ADC general configuration
 	adc1_handler.Instance = ADC1;
-
 	adc1_handler.Init.DataAlign = ADC_DATAALIGN_RIGHT;
-
 	adc1_handler.Init.ScanConvMode = ADC_SCAN_DISABLE;
-
 	adc1_handler.Init.ContinuousConvMode = DISABLE;
-
 	adc1_handler.Init.NbrOfConversion = 1;
-
 	adc1_handler.Init.ExternalTrigConv = ADC_SOFTWARE_START;
 
 
-	HAL_ADC_Init(&adc1_handler);
+	if (HAL_ADC_Init(&adc1_handler) != HAL_OK)
+	{
+		return false;
+	}
+	return true;
+
+	// ADC channel configuration
 
 
 
