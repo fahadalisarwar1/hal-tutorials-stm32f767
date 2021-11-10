@@ -13,14 +13,14 @@ ADC_HandleTypeDef adc1_handler;
 
 void adc_GPIO_init(void)
 {
-    __HAL_RCC_GPIOA_CLK_ENABLE();
+    __HAL_RCC_GPIOC_CLK_ENABLE();
 
     GPIO_InitTypeDef gpio_t;
-    gpio_t.Pin = ADC1_CH5;
+    gpio_t.Pin = ADC1_CH10;
 
     gpio_t.Mode = GPIO_MODE_ANALOG;
     gpio_t.Pull = GPIO_NOPULL;
-    HAL_GPIO_Init(GPIOA, &gpio_t);
+    HAL_GPIO_Init(GPIOC, &gpio_t);
 }
 
 
@@ -34,6 +34,7 @@ bool adc_single_conversion_init()
 	adc1_handler.Init.ScanConvMode = ADC_SCAN_DISABLE;
 	adc1_handler.Init.ContinuousConvMode = DISABLE;
 	adc1_handler.Init.NbrOfConversion = 1;
+	adc1_handler.Init.DiscontinuousConvMode = DISABLE;
 	adc1_handler.Init.ExternalTrigConv = ADC_SOFTWARE_START;
 
 
@@ -41,13 +42,18 @@ bool adc_single_conversion_init()
 	{
 		return false;
 	}
+
+
 	// ADC channel configuration
 
 	ADC_ChannelConfTypeDef channel_config_t;
-	channel_config_t.Channel = ADC_CHANNEL_1;
+	channel_config_t.Channel = ADC_CHANNEL_10;
 
 	channel_config_t.Rank = 1;
+
 	channel_config_t.SamplingTime = ADC_SAMPLETIME_28CYCLES;
+
+
 	if (HAL_ADC_ConfigChannel(&adc1_handler, &channel_config_t) != HAL_OK)
 	{
 		return false;

@@ -14,7 +14,7 @@
 extern ADC_HandleTypeDef adc1_handler;
 
 
-#define ADC1_CH5			GPIO_PIN_5
+#define ADC1_CH10			GPIO_PIN_0
 
 
 void adc_GPIO_init(void);
