@@ -41,9 +41,22 @@ bool adc_single_conversion_init()
 	{
 		return false;
 	}
+	// ADC channel configuration
+
+	ADC_ChannelConfTypeDef channel_config_t;
+	channel_config_t.Channel = ADC_CHANNEL_1;
+
+	channel_config_t.Rank = 1;
+	channel_config_t.SamplingTime = ADC_SAMPLETIME_28CYCLES;
+	if (HAL_ADC_ConfigChannel(&adc1_handler, &channel_config_t) != HAL_OK)
+	{
+		return false;
+	}
+
+
 	return true;
 
-	// ADC channel configuration
+
 
 
 
