@@ -61,10 +61,17 @@ bool adc_single_conversion_init()
 
 
 	return true;
+}
 
 
+void adc_interrupt_init()
+{
+	__HAL_ADC_ENABLE_IT(&adc1_handler, ADC_IT_EOC);
 
 
-
+	HAL_NVIC_SetPriority(ADC_IRQn, 10, 0);
+	HAL_NVIC_EnableIRQ(ADC_IRQn);
 
 }
+
+
