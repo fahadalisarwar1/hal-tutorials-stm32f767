@@ -126,5 +126,11 @@ bool adc_multichannel_init(void)
 }
 
 
+void adc_DMA_init()
+{
+
+
+}
+
 
 
