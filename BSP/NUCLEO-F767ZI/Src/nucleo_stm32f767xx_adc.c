@@ -75,3 +75,56 @@ void adc_interrupt_init()
 }
 
 
+
+
+bool adc_multichannel_init(void)
+{
+	__HAL_RCC_ADC1_CLK_ENABLE();
+
+	// ADC general configuration
+	adc1_handler.Instance = ADC1;
+	adc1_handler.Init.DataAlign = ADC_DATAALIGN_RIGHT;
+
+	adc1_handler.Init.ScanConvMode = ADC_SCAN_ENABLE;
+
+
+	adc1_handler.Init.ContinuousConvMode = DISABLE;
+	adc1_handler.Init.NbrOfConversion = 2;
+
+
+	adc1_handler.Init.DiscontinuousConvMode = DISABLE;
+	adc1_handler.Init.ExternalTrigConv = ADC_SOFTWARE_START;
+
+	if (HAL_ADC_Init(&adc1_handler) != HAL_OK)
+	{
+		return false;
+	}
+
+
+	// ADC channel configuration
+
+	ADC_ChannelConfTypeDef channel_config_t;
+	channel_config_t.Channel = ADC_CHANNEL_10; // connected to PC0
+	channel_config_t.Rank = 1;
+	channel_config_t.SamplingTime = ADC_SAMPLETIME_28CYCLES;
+
+	if (HAL_ADC_ConfigChannel(&adc1_handler, &channel_config_t) != HAL_OK)
+	{
+		return false;
+	}
+
+	channel_config_t.Channel = ADC_CHANNEL_11; // PC1
+	channel_config_t.Rank = 2;
+	channel_config_t.SamplingTime = ADC_SAMPLETIME_28CYCLES;
+
+	if (HAL_ADC_ConfigChannel(&adc1_handler, &channel_config_t) != HAL_OK)
+	{
+		return false;
+	}
+	return true;
+
+}
+
+
+
+

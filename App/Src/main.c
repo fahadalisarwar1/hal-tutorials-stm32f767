@@ -37,6 +37,8 @@ int main(void)
     }
 }
 
+
+
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *adc1_handler)
 {
 	uint16_t adcValue  = 0;

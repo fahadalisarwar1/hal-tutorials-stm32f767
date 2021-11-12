@@ -27,4 +27,21 @@ bool adc_single_conversion_init(void);
 void adc_interrupt_init(void);
 
 
+
+
+/**
+ *
+ * @brief ADC multichannel config
+ */
+
+bool adc_multichannel_init(void);
+
+void adc_DMA_init(void); // wil take care of data transfer from peripheral to memory.
+
+
+
+
+
+
+
 #endif /* NUCLEO_F767ZI_INC_NUCLEO_STM32F767XX_ADC_H_ */
